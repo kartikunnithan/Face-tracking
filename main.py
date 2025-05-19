@@ -16,6 +16,7 @@ while True:
         cv2.rectangle(frame, (x, y), (x + w, y + h), (125, 100, 10), 5)
     cv2.putText(frame, f'People Count: {len(faces)}', (10, 40), cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0, 255, 0), 3, cv2.LINE_AA)
     cv2.imshow("Face detection and count", frame)
+    cv2.imshow("Face rotation",frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 cap.release()
